@@ -11,11 +11,7 @@ class BootScene extends Phaser.Scene {
   //  }
   // Load the assets
 
-  /* The first row creates a tileset image. The next two rows add the layers to the map.
-*two layers – the first one is called ‘Grass’ and contains only grass tiles,
- * the second is ‘Obstacles’ and there are some trees on it.
- * The method setCollisionByExclusion makes all tiles except the ones send, available for collision detection.
- * Sending -1 in our case makes all tiles on this layer collidable. */
+
   preload() {
     // map tiles
     this.load.image('tiles', 'src/assets/map/spritesheet.png');
