@@ -21,11 +21,13 @@ class BootScene extends Phaser.Scene {
 
     // our two characters
     this.load.spritesheet('player', 'src/assets/images/RPG_assets.png', { frameWidth: 16, frameHeight: 16 });
+    this.load.image('dragonblue', 'src/assets/images/dragonblue.png');
+    this.load.image('dragonorange', 'src/assets/images/dragonorrange.png');
   }
 
   //   Add Objects
   create() {
-    this.scene.start('WorldScene');
+    this.scene.start('BattleScene');
   }
 }
 
