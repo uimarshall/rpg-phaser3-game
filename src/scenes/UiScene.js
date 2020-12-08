@@ -2,6 +2,7 @@ import Phaser, { Animations } from 'phaser';
 import ActionsMenu from '../components/ActionsMenu';
 import EnemiesMenu from '../components/EnemiesMenu';
 import HeroesMenu from '../components/HeroesMenu';
+import Message from '../components/Message';
 
 
 class UiScene extends Phaser.Scene {
@@ -44,6 +45,8 @@ class UiScene extends Phaser.Scene {
         this.events.on("SelectEnemies", this.onSelectEnemies, this);
         this.events.on("Enemy", this.onEnemy, this);
         this.battleScene.nextTurn();
+        this.message = new Message(this, this.battleScene.events);
+        this.add.existing(this.message);
 
          
     }
