@@ -6,11 +6,6 @@ class BootScene extends Phaser.Scene {
     super('BootScene');// 'bootGame' will be the identifier for this 'scene1'
   }
 
-  //  BootScene(){
-  //       Phaser.Scene.call(this, { key: 'BootScene' });
-  //  }
-  // Load the assets
-
 
   preload() {
     // map tiles

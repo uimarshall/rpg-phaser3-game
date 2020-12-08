@@ -24,8 +24,8 @@ const config = {
   scene: [
     BootScene,
     WorldScene,
-    BattleScene, 
-    UiScene
+    BattleScene,
+    UiScene,
   ],
 };
 

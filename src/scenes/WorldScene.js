@@ -104,10 +104,20 @@ to be able to see it during development you can set debug: true like this: */
       this.spawns.create(x, y, 20, 20);
     }
 
+  
+
     // Make the player and zones interract
     /** When the player overlaps with one of the zones,
   * the onMeetEnemy method is called.  */
     this.physics.add.overlap(this.player, this.spawns, this.onMeetEnemy, false, this);
+    this.sys.events.on('wake', this.wake, this);
+  }
+
+  wake() {
+    this.cursors.left.reset();
+    this.cursors.right.reset();
+    this.cursors.up.reset();
+    this.cursors.down.reset();
   }
 
   onMeetEnemy(player, zone) {
@@ -119,6 +129,8 @@ to be able to see it during development you can set debug: true like this: */
     this.cameras.main.shake(300);
 
     // start battle
+    // switch to BattleScene
+    this.scene.switch('BattleScene');
   }
 
   //   Move the player with the physics engine
